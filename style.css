@@ -1,0 +1,296 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+header
+{
+    max-width: 1440px;
+    margin: auto;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 60% repeat(2, auto);
+    grid-template-areas: "logo lien inscription";
+    align-items: center;
+    font-weight: 500;
+}
+    
+.lien
+{
+    grid-area: lien;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* Style Menu */
+@media screen and (min-width: 1099px)
+{
+     .logo 
+    {
+        grid-area: logo;
+    }
+
+    .lien1, .lien2
+    {
+        padding: 2.2em;
+        border-top: 3px solid white;
+    }
+
+    .lien1
+    {
+        border-top: 3px solid #0065FC;
+    }
+
+    .lien2
+    {
+        color: gray;
+    }
+
+    .lien2:hover, .lien1:hover
+    {
+        border-top: 3px solid #0065FC;
+        color: #0065FC;
+        transition: 300ms;
+    }   
+}
+
+/* ------------------------------------ */
+
+
+/* Style bouton d'inscription*/
+.inscription
+{
+    grid-area: inscription;
+}
+
+.btn
+{
+    padding: 10px 15px;
+}
+
+.btn:hover
+{
+    background-color:#0065FC;
+    color: white;
+    border-radius: 20px;
+}
+/* ------------------------------------ */
+
+a
+{
+    text-decoration: none;
+    color: #0065FC;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1099px)
+{
+    .container
+    {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: 70px 70px;
+        grid-template-areas:"logo inscription"
+                            "lien lien";
+    }
+
+    .logo
+    {
+        margin-left: 20px;
+    }
+
+    .inscription
+    {
+        grid-column: 2;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 25px;
+    }
+
+    .lien
+    {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .lien1, .lien2
+    {
+        padding: 20px 2em;
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        border-bottom: 3px solid #F2F2F2;
+    }
+
+    .lien1:hover, .lien2:hover
+    {
+        border-bottom: 3px solid #0065FC;
+        transition-duration: 400ms;
+    }
+}
+
+section
+{
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 10px; 
+}
+
+section h2
+{
+    font-size: 1.8em;
+}
+
+/* --- Chant de Rechercher --- */
+input[type=text]
+{
+    max-width: 20%;
+    min-width: 230px;  
+    border-radius: 5px 0 0 5px;
+    border: 3px solid #F2F2F2;  
+    border-right: none;  
+    margin: 8px 0;
+    padding: 8px;   
+    box-sizing: border-box; 
+    height: 45px;
+    padding-left: 50px;  
+    
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+
+button
+{
+    position: absolute;
+    top: 8px;
+  
+    height: 45px;
+    width: 100px;
+    border: none;
+    background-color: #0065FC;
+    font-size: 16px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.input-icone
+{
+    position: relative;
+}
+
+.input-icone i
+{
+    position: absolute; 
+    left: 0; 
+    top: 8px; 
+    padding: 14.5px 15px;
+    border-radius: 5px 0 0 5px;
+    background-color: #F2F2F2;
+}
+/* ------------------------------- */
+
+.titre-filtre
+{
+    font-size: 23px;
+}
+
+.filtre
+{
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+.filtre div p
+{
+    display: inline;
+    padding-left: 5px;
+    font-weight: 700;
+}
+
+.filtre div
+{
+    border: 3px solid #F2F2F2;
+    height: 50px;
+    width: 160px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.filtre div:hover
+{
+    border: 3px solid #0065FC;
+    color: #0065FC;
+    transition: 400ms;
+}
+
+.filtre div.btn-animaux
+{
+    width: 210px;
+}
+
+.filtre div i
+{
+    padding: 16.7px;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    border-radius: 50%;
+}
+
+/* Filtre Mobile */
+@media screen and (max-width: 600px)
+{
+    .filtre
+    {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .filtre div
+    {
+        margin-bottom: 10px;
+    }
+}
+
+/* INFO */
+.info
+{
+    max-width: 1440px;
+}
+
+.info i
+{
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+    padding: 7px 10px;
+    font-size: 13px;
+    color: #0065FC;
+    margin-right: 10px;
+}
+
+/* ------ MAIN ----- */
+main
+{
+    max-width: 1440px;
+    margin: 50px auto;
+}
