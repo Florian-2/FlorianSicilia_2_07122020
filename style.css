@@ -21,6 +21,11 @@ header
     margin: auto;
 }
 
+.padding
+{
+    padding: 0 10px;
+}
+
 .container
 {
     display: grid;
@@ -82,13 +87,14 @@ header
 .btn
 {
     padding: 10px 15px;
+    transition: 0.3s;
 }
 
 .btn:hover
 {
     background-color:#0065FC;
     color: white;
-    border-radius: 20px;
+    border-radius: 999px;
 }
 /* ------------------------------------ */
 
@@ -146,9 +152,7 @@ a
 
 section
 {
-    max-width: 1440px;
     margin: auto;
-    padding: 0 10px; 
 }
 
 section h2
@@ -291,8 +295,35 @@ button
 /* ------ MAIN ----- */
 main
 {
-    margin: 50px auto;
+    margin: auto;
 }
+
+section.container-main
+{
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    grid-template-rows: 600px;
+    column-gap: 2.5em;
+    border-radius: 20px;
+}
+
+div.container-hebergement, aside.container-popu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.322);
+}
+
+
+
+
+
+
+
+
 
 /* SECTION Activités à marseille */
 .bloc-activite {
@@ -301,23 +332,24 @@ main
 
 .container-activite {
     display: grid;
-    grid-template-columns: repeat(4, 320px);
-    grid-template-rows: repeat(2, 260px);
-    grid-gap: 25px;
+    grid-template-columns: repeat(4, 330px);
+    grid-template-rows: repeat(2, 265px);
+    grid-gap: 35px;
     justify-content: center;
 }
 
 .container-activite > * {
     background-color: rgba(255, 255, 255, 0.575);
     font-size: 20px;
+    font-weight: 500;
     border-radius: 20px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
     cursor: pointer;
+    transition: 300ms;
 }
 
 .container-activite > *:hover {
     transform: scale(1.03);
-    transition: 300ms;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.40);
 }
 
@@ -366,8 +398,8 @@ main
 @media screen and (max-width: 1370px) {
     .container-activite {
         display: grid;
-        grid-template-columns: repeat(2, 300px);
-        grid-template-rows: repeat(4, 200px);
+        grid-template-columns: repeat(2, 310px);
+        grid-template-rows: repeat(4, 205px);
         grid-template-areas: "g-one p-one" "p-three p-two" "p-four g-two";
         justify-content: center;
     }
@@ -429,6 +461,10 @@ main
     }
 }
 
+/* ------------------------------ */
+
+
+
 
 /* ----- FOOTER ----- */
 footer 
@@ -471,3 +507,6 @@ footer
 {
     text-decoration: underline;
 }
+
+/* -------------------- */
+
