@@ -155,7 +155,7 @@ section
     margin: auto;
 }
 
-section h2
+section h2.titre-principal
 {
     font-size: 1.8em;
 }
@@ -241,14 +241,14 @@ button
     border-radius: 50px;
     cursor: pointer;
     margin-right: 5px;
+    transition: 300ms;
 }
 
 .filtre div:hover
 {
     border: 3px solid #0065FC;
     color: #0065FC;
-    transition: 400ms;
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
 
 .filtre div.btn-animaux
@@ -295,34 +295,113 @@ button
 /* ------ MAIN ----- */
 main
 {
-    margin: auto;
+    margin: 40px auto;
 }
 
-section.container-main
+section.container-main /* Structure GRID PC: activités */
 {
     display: grid;
     grid-template-columns: 6fr 3fr;
-    grid-template-rows: 600px;
+    grid-template-rows: auto;
     column-gap: 2.5em;
     border-radius: 20px;
 }
 
-div.container-hebergement, aside.container-popu
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
+.container-hebergement {
+    padding: 30px;
+    background-color: #F2F2F2;
     border-radius: 20px;
-    background-color: rgba(128, 128, 128, 0.322);
+    max-width: 850px;
 }
 
+.carte-hebergement {
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
+    border-radius: 20px;
+    padding: 5px;
+    transition: 300ms;
+}
 
+.carte-hebergement:hover
+{
+    transform: scale(1.05);
+}
 
+.carte-img {
+    width: 250px;
+}
 
+.carte-img img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
 
+.container-carte {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
 
+.carte-text > *
+{
+    margin: 3px 5px;
+    color: black;
+}
 
+.etoile
+{
+    margin: 3px 5px;
+}
+
+i.colorGray
+{
+    color: rgba(128, 128, 128, 0.397);
+}
+
+.lien-plus a
+{
+    color: black;
+    font-weight: 500;
+}
+
+div.container-hebergement h2 {
+    margin: 0 0 35px 0;
+}
+
+div.container-hebergement p.lien-plus {
+    margin: 30px 0 0 0;
+}
+
+div.container-hebergement, aside.container-popu
+{
+    border-radius: 20px;
+    background-color: #F2F2F2;
+}
+
+@media screen and (max-width: 920px) {
+    .container-carte {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    .container-hebergement {
+        background-color: white;
+    }
+    .carte-hebergement {
+        width: 300px;
+        height: 200px;
+    }
+    .carte-img {
+        width: 300px;
+    }
+}
 
 
 /* SECTION Activités à marseille */
@@ -341,7 +420,7 @@ div.container-hebergement, aside.container-popu
 .container-activite > * {
     background-color: rgba(255, 255, 255, 0.575);
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     border-radius: 20px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
     cursor: pointer;
@@ -376,8 +455,10 @@ div.container-hebergement, aside.container-popu
     grid-column: 3 / 4;
 }
 
-.text-activiter {
-    padding: 5px 0 0 20px;
+.text-activiter p
+{
+    text-align: center;
+    margin: 4px;
 }
 
 .taille-g-img img {
@@ -395,7 +476,7 @@ div.container-hebergement, aside.container-popu
     border-radius: 20px 20px 0 0;
 }
 
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 1390px) {
     .container-activite {
         display: grid;
         grid-template-columns: repeat(2, 310px);
@@ -508,5 +589,4 @@ footer
     text-decoration: underline;
 }
 
-/* -------------------- */
-
+/* ------------------- */
