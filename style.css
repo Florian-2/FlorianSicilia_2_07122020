@@ -168,12 +168,12 @@ input[type=text]
     border-radius: 5px 0 0 5px;
     border: 3px solid #F2F2F2;  
     border-right: none;  
+    outline: none;
     margin: 8px 0;
     padding: 8px;   
     box-sizing: border-box; 
     height: 45px;
     padding-left: 50px;  
-    
     font-size: 18px;
     font-weight: 600;
     font-family: 'Raleway', sans-serif;
@@ -383,7 +383,7 @@ div.container-hebergement, aside.container-popu
     background-color: #F2F2F2;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1390px) {
     .container-carte {
         width: 100%;
         display: flex;
@@ -413,7 +413,7 @@ div.container-hebergement, aside.container-popu
     display: grid;
     grid-template-columns: repeat(4, 330px);
     grid-template-rows: repeat(2, 265px);
-    grid-gap: 35px;
+    grid-gap: 40px;
     justify-content: center;
 }
 
@@ -479,11 +479,17 @@ div.container-hebergement, aside.container-popu
 @media screen and (max-width: 1390px) {
     .container-activite {
         display: grid;
-        grid-template-columns: repeat(2, 310px);
-        grid-template-rows: repeat(4, 205px);
+        grid-template-columns: repeat(2, 320px);
+        grid-template-rows: repeat(4, 250px);
         grid-template-areas: "g-one p-one" "p-three p-two" "p-four g-two";
         justify-content: center;
     }
+
+    section h2.titre-activiter
+    {
+        text-align: center;
+    }
+
     .grand-1 {
         grid-area: g-one;
         grid-row: 1 / 3;
