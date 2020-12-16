@@ -29,12 +29,12 @@ header
 .container
 {
     display: grid;
-    grid-template-columns: 60% repeat(2, auto);
+    grid-template-columns: 3fr repeat(2, auto);
     grid-template-areas: "logo lien inscription";
     align-items: center;
     font-weight: 500;
 }
-    
+
 .lien
 {
     grid-area: lien;
@@ -46,9 +46,11 @@ header
 /* Style Menu */
 @media screen and (min-width: 1099px)
 {
-     .logo 
+    .logo 
     {
         grid-area: logo;
+        grid-template-columns: 55% repeat(2, auto);
+
     }
 
     .lien1, .lien2
@@ -82,6 +84,7 @@ header
 .inscription
 {
     grid-area: inscription;
+    padding-left: 20px;
 }
 
 .btn
@@ -298,7 +301,7 @@ main
     margin: 40px auto;
 }
 
-section.container-main /* Structure GRID PC: activités */
+section.container-main
 {
     display: grid;
     grid-template-columns: 6fr 3fr;
@@ -327,6 +330,7 @@ section.container-main /* Structure GRID PC: activités */
 .carte-hebergement:hover
 {
     transform: scale(1.05);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.40);
 }
 
 .carte-img {
@@ -402,6 +406,131 @@ div.container-hebergement, aside.container-popu
         width: 300px;
     }
 }
+
+/* ASIDE les plus populaire */
+
+.container-populaire
+{
+    max-width: 460px;
+    height: auto;
+    padding: 1em 2em;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+}
+
+.container-carte-flex
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carte-popu
+{
+    padding: 5px;
+    display: flex;
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 15px;
+    height: 140px;
+    width: 380px;
+    transition: 300ms;
+    cursor: pointer;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
+}
+
+.carte-popu:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.40);
+}
+
+.carte-popu-img
+{
+    width: 200px;
+}
+.carte-popu-img img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+}
+
+.container-text
+{
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto 25px;
+}
+
+.container-text h2
+{
+    display: inline-block;
+    margin: 0;
+    font-weight: 700;
+}
+
+.carte-popu-text
+{
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.carte-popu-text h3, .carte-popu-text p
+{
+    margin: 0;
+}
+
+.container-text i
+{
+    font-size: 28px;
+}
+
+.carte-popu-stars
+{
+    color: #0065FC;
+    display: inline-block;
+    position: absolute;
+    bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* SECTION Activités à marseille */
