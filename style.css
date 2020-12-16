@@ -574,12 +574,12 @@ div.container-hebergement, aside.container-popu
 
     .carte-hebergement 
     {
-       width: 350px;
+       width: 340px;
        height: 200px;
     }
 
     .carte-img {
-        width: 350px;
+        width: 340px;
     }
 
 }
@@ -592,14 +592,20 @@ div.container-hebergement, aside.container-popu
         flex-direction: column;
         gap: 20px;  
     }
-
-    .container-populaire
-    {
-        border-radius: none;
-    }
 }
 
+@media screen and (max-width: 600px)
+{
+    .container-populaire
+    {
+        padding: 10px;
+    }
 
+    .container-text
+    {
+        margin: 25px auto;
+    }
+}
 
 /* ---- SECTION Activités à marseille ---- */
 .bloc-activite {
@@ -685,7 +691,7 @@ div.container-hebergement, aside.container-popu
 
     section h2.titre-activiter
     {
-        text-align: center;
+        margin-left: 20px;
     }
 
     .grand-1 {
@@ -715,8 +721,8 @@ div.container-hebergement, aside.container-popu
 @media screen and (max-width: 800px) {
     .container-activite {
         display: grid;
-        grid-template-columns: repeat(1, 350px);
-        grid-template-rows: repeat(6, 200px);
+        grid-template-columns: repeat(1, 370px);
+        grid-template-rows: repeat(6, 210px);
         grid-template-areas: "g-one" "p-one" "p-two" "p-three" "p-four" "g-two";
         justify-content: center;
     }
@@ -745,10 +751,6 @@ div.container-hebergement, aside.container-popu
         border-radius: 20px 20px 0 0;
     }
 }
-
-/* ------------------------------ */
-
-
 
 
 /* ----- FOOTER ----- */
