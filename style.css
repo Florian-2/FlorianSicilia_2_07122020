@@ -43,6 +43,13 @@ header
     align-items: center; 
 }
 
+a
+{
+    text-decoration: none;
+    color: #0065FC;
+    font-size: 16px;
+}
+
 /* Style Menu */
 @media screen and (min-width: 1099px)
 {
@@ -76,7 +83,6 @@ header
         transition: 300ms;
     }   
 }
-
 /* ------------------------------------ */
 
 
@@ -101,13 +107,8 @@ header
 }
 /* ------------------------------------ */
 
-a
-{
-    text-decoration: none;
-    color: #0065FC;
-    font-size: 16px;
-}
 
+/* ---- MENU RESPONSIVE ---- */
 @media screen and (max-width: 1099px)
 {
     .container
@@ -186,7 +187,6 @@ button
 {
     position: absolute;
     top: 8px;
-  
     height: 45px;
     width: 100px;
     border: none;
@@ -213,6 +213,7 @@ button
 }
 /* ------------------------------- */
 
+/* ---- SECTION FILTRE ---- */
 .titre-filtre
 {
     font-size: 23px;
@@ -267,7 +268,7 @@ button
     border-radius: 50%;
 }
 
-/* Filtre Mobile */
+/* ---- FILTRE RESPONSIVE ---- */
 @media screen and (max-width: 600px)
 {
     .filtre
@@ -305,9 +306,21 @@ section.container-main
 {
     display: grid;
     grid-template-columns: 6fr 3fr;
-    grid-template-rows: auto;
+    grid-template-areas: "heberg" "popu";
     column-gap: 2.5em;
     border-radius: 20px;
+}
+
+.container-hebergement
+{
+    grid-area: heberg;
+}
+
+aside.container-popu
+{
+    grid-area: popu;
+    grid-column: 2 / 3;
+    grid-row: 1;
 }
 
 .container-hebergement {
@@ -405,13 +418,13 @@ div.container-hebergement, aside.container-popu
     .carte-img {
         width: 300px;
     }
-}
+} 
 
-/* ASIDE les plus populaire */
+/* ---- ASIDE les plus populaire ---- */
 
 .container-populaire
 {
-    max-width: 460px;
+    max-width: 400px;
     height: auto;
     padding: 1em 2em;
     background-color: #F2F2F2;
@@ -433,7 +446,7 @@ div.container-hebergement, aside.container-popu
     background-color: white;
     border-radius: 15px;
     height: 140px;
-    width: 380px;
+    max-width: 380px;
     transition: 300ms;
     cursor: pointer;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
@@ -500,40 +513,90 @@ div.container-hebergement, aside.container-popu
     bottom: 15px;
 }
 
+.carte-img {
+    width: 250px;
+}
+
+.carte-img img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
 
 
 
+/* MAIN Responsive GRID */
+@media screen and (max-width: 1405px)
+{
+    section.container-main
+    {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:"popu" 
+                            "heberg";
+        gap: 50px;
+    }
+
+    .container-carte-flex
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .container-populaire
+    {
+        max-width: 100%;
+    }
+
+    aside.container-popu
+    {
+        grid-area: popu;
+        grid-column: 1;
+    }
+
+    .container-text
+    {
+        margin: 0 0 25px 0;
+    }   
+
+    .container-hebergement
+    {
+        max-width: 100%;
+        background-color: white;
+    }
+
+    .carte-hebergement 
+    {
+       width: 350px;
+       height: 200px;
+    }
+
+    .carte-img {
+        width: 350px;
+    }
+
+}
+
+@media screen and (max-width: 1090px)
+{
+    .container-carte-flex
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;  
+    }
+
+    .container-populaire
+    {
+        border-radius: none;
+    }
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* SECTION Activités à marseille */
+/* ---- SECTION Activités à marseille ---- */
 .bloc-activite {
     margin: 50px auto;
 }
@@ -605,6 +668,7 @@ div.container-hebergement, aside.container-popu
     border-radius: 20px 20px 0 0;
 }
 
+/* ---- RESPONSIVE Section Activités à Marseille ---- */
 @media screen and (max-width: 1390px) {
     .container-activite {
         display: grid;
@@ -723,5 +787,3 @@ footer
 {
     text-decoration: underline;
 }
-
-/* ------------------- */
