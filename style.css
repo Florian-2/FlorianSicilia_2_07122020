@@ -197,6 +197,36 @@ button
     cursor: pointer;
 }
 
+/* icon de rechercher */
+button i.fas
+{
+    display: none;
+}
+
+@media screen and (max-width: 800px)
+{
+    button
+    {
+        width: 50px;
+    }
+
+    button i.fas
+    {
+        display: inline-block;
+        color: white;
+        background-color: #0065FC;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    button span#btn-rechercher
+    {
+        display: none;
+    }
+}
+
 .input-icone
 {
     position: relative;
@@ -598,7 +628,7 @@ div.container-hebergement, aside.container-popu
 {
     .container-populaire
     {
-        padding: 10px;
+        padding: 5px;
     }
 
     .container-text
