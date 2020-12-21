@@ -16,14 +16,16 @@ html
     max-width: 1440px;
 }
 
-header
-{
-    margin: auto;
-}
-
 .padding
 {
     padding: 0 10px;
+}
+
+
+/* MENU */
+header
+{
+    margin: auto;
 }
 
 .container
@@ -50,14 +52,13 @@ a
     font-size: 16px;
 }
 
-/* Style Menu */
+
 @media screen and (min-width: 1099px)
 {
     .logo 
     {
         grid-area: logo;
         grid-template-columns: 55% repeat(2, auto);
-
     }
 
     .lien1, .lien2
@@ -86,7 +87,7 @@ a
 /* ------------------------------------ */
 
 
-/* Style bouton d'inscription*/
+/* Style bouton d'inscription */
 .inscription
 {
     grid-area: inscription;
@@ -215,6 +216,7 @@ button i.fas
         display: inline-block;
         color: white;
         background-color: #0065FC;
+        padding: 0;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -430,7 +432,7 @@ div.container-hebergement, aside.container-popu
     background-color: #F2F2F2;
 }
 
-@media screen and (max-width: 1390px) {
+@media screen and (max-width: 1400px) {
     .container-carte {
         width: 100%;
         display: flex;
@@ -438,9 +440,7 @@ div.container-hebergement, aside.container-popu
         justify-content: center;
         gap: 25px;
     }
-    .container-hebergement {
-        background-color: white;
-    }
+
     .carte-hebergement {
         width: 300px;
         height: 200px;
