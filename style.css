@@ -337,7 +337,6 @@ section.container-main
     display: grid;
     grid-template-columns: 6fr 2.8fr;
     grid-template-areas: "heberg" "popu";
-    /* column-gap: 2em; */
     border-radius: 20px;
 }
 
@@ -811,7 +810,7 @@ footer
 
 .liste 
 {
-    width: 250px;
+    width: 300px;
     padding: 20px 0;
 }
 
